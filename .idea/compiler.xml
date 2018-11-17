@@ -6,10 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="CTConsumer" />
         <module name="Producer" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="CTConsumer" target="1.5" />
+      <module name="KafkaAPI" target="1.5" />
       <module name="Producer" target="1.5" />
       <module name="TelecomDataPro10" target="1.5" />
     </bytecodeTargetLevel>

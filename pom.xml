@@ -10,7 +10,7 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>Producer</module>
-        <module>KafkaAPI</module>
+        <module>CTConsumer</module>
     </modules>
 
 
