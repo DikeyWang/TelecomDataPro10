@@ -18,7 +18,7 @@ public class LogProducer {
     public String getLog() {
         //获取建立通话的时间
         Calendar callTime = new CallDateProducer().getCallDate("2017-01-01","2018-11-15");
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         String callDate = simpleDateFormat.format(callTime.getTime());
         //获取主叫和被叫
         String call1 = phoneNumList.get(new Random().nextInt(phoneNumList.size()));
