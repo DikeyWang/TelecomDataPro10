@@ -1,0 +1,4 @@
+com\xtrj\Utils\HBaseFilterUtil.class
+com\xtrj\Utils\HBaseUtil.class
+com\xtrj\Utils\ScanRowkeyUtil.class
+com\xtrj\Utils\PropertiesUtil.class
