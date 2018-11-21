@@ -4,6 +4,7 @@ import com.xtrj.Utils.HBaseUtil;
 import com.xtrj.Utils.PropertiesUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
+import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
@@ -25,6 +26,9 @@ public class HBaseDao {
     static{
         //意义不明
         conf = HBaseConfiguration.create();
+        conf.set("hbase.zookeeper.quorum", "myhadoop200,myhadoop201,myhadoop202");
+        conf.set("hbase.zookeeper.master","myhadoop200:60000");
+        conf.set("hbase.table.sanity.checks","false");
     }
 
     public HBaseDao() {
@@ -36,7 +40,8 @@ public class HBaseDao {
         flag = PropertiesUtil.getProperty("hbase.caller.flag");
 
         if(!HBaseUtil.isExistTable(conf, tableName)){
-            HBaseUtil.initNamespace(conf, namespace);
+            //已创建过命名空间
+            /*HBaseUtil.initNamespace(conf, namespace);*/
             HBaseUtil.createTable(conf, tableName, "f1", "f2");
         }
     }

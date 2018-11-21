@@ -11,7 +11,7 @@
     <modules>
         <module>Producer</module>
         <module>CTConsumer</module>
-        <module>CheckData11</module>
+        <module>CheckData</module>
     </modules>
 
 

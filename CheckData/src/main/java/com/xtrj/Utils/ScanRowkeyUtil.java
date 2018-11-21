@@ -33,7 +33,7 @@ public class ScanRowkeyUtil {
     //01_15837312345_201711
     //15837312345 2017-01-01 2017-05-01
     public void genRowKeys(){
-        int regions = Integer.valueOf(PropertiesUtil.getProperty("hbase.regions.count"));
+        int regions = Integer.valueOf(MyPropertiesUtil.getProperty("hbase.regions.count"));
         try {
             Date startDate = sdf.parse(startDateString);
             Date stopDate = sdf.parse(stopDateString);
@@ -44,9 +44,11 @@ public class ScanRowkeyUtil {
             //当前结束时间
             Calendar currentStopCalendar = Calendar.getInstance();
             currentStopCalendar.setTimeInMillis(startDate.getTime());
+            //在当前开始时间的基础上加一个月
             currentStopCalendar.add(Calendar.MONTH, 1);
 
             while (currentStopCalendar.getTimeInMillis() <= stopDate.getTime()) {
+                //反算出当前要查询的手机号的分区号
                 String regionCode = HBaseUtil.genPartitionCode(telephone, sdf2.format(new Date(currentStartCalendar.getTimeInMillis())), regions);
                 // 01_15837312345_201711
                 String startRowKey = regionCode + "_" + telephone + "_" + sdf2.format(new Date(currentStartCalendar.getTimeInMillis()));

@@ -93,7 +93,7 @@ public class HBaseUtil {
                     tableDescriptor.addFamily(new HColumnDescriptor(cf).setMaxVersions(3));
                 }
                 //添加协处理器
-                //tableDescriptor.addCoprocessor("com.xtkj.coprocessor.CalleeWriteObserver");
+                tableDescriptor.addCoprocessor("com.xtrj.HBase.coprocessor.CalleeWriteObserver");
                 int regions = Integer.valueOf(PropertiesUtil.getProperty("hbase.regions.count"));
                 admin.createTable(tableDescriptor, getSplitKeys(regions));
                 System.out.println("表创建成功：" + tableName);

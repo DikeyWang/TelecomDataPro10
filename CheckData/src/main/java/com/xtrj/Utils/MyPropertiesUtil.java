@@ -10,7 +10,7 @@ import java.util.Properties;
  * @author dikey
  * @version 1.0
  * */
-public class PropertiesUtil {
+public class MyPropertiesUtil {
     public static Properties properties = null;
     static{
         try {
