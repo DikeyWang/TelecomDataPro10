@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="CheckData" />
         <module name="CheckData11" />
+        <module name="CT_Analysis" />
         <module name="CTConsumer" />
         <module name="Producer" />
       </profile>
@@ -15,6 +16,7 @@
     <bytecodeTargetLevel>
       <module name="CheckData" target="1.5" />
       <module name="CheckData11" target="1.5" />
+      <module name="CT_Analysis" target="1.8" />
       <module name="CTConsumer" target="1.8" />
       <module name="KafkaAPI" target="1.5" />
       <module name="Producer" target="1.5" />

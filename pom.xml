@@ -12,6 +12,7 @@
         <module>Producer</module>
         <module>CTConsumer</module>
         <module>CheckData</module>
+        <module>CT_Analysis</module>
     </modules>
 
 

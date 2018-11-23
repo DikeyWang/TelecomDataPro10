@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CTConsumer/CTConsumer.iml" filepath="$PROJECT_DIR$/CTConsumer/CTConsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CT_Analysis/CT_Analysis.iml" filepath="$PROJECT_DIR$/CT_Analysis/CT_Analysis.iml" />
       <module fileurl="file://$PROJECT_DIR$/CheckData/CheckData.iml" filepath="$PROJECT_DIR$/CheckData/CheckData.iml" />
       <module fileurl="file://$PROJECT_DIR$/Producer/Producer.iml" filepath="$PROJECT_DIR$/Producer/Producer.iml" />
       <module fileurl="file://$PROJECT_DIR$/TelecomDataPro10.iml" filepath="$PROJECT_DIR$/TelecomDataPro10.iml" />
